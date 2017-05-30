@@ -1,6 +1,7 @@
 // pages/index.js
 import React from 'react';
+import Header from '../components/header';
 
 export default () => (
-  <h1>Hello World!</h1>
+  <Header />
 );
