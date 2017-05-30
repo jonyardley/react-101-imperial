@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from '../components/header.js';
 
+import Header from '../components/header.js';
 
 it('render name', () => {
   const props = { name : 'Jon' };
