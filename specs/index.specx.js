@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import TodoList from '../components/todo-list.js';
+import App from '../pages/index.js';
 
 it('add an item to the list', () => {
-  const props = { items: [] };
+  const props = { items: [], name: 'Jon' };
 
   const component = mount(
-    <TodoList {...props} />
+    <App {...props} />
   );
 
   const input = component.find('input');
@@ -23,7 +23,7 @@ it('add an item to the list', () => {
 
   const itemList = component.find('li');
 
-  expect(itemList.length).toEqual(0);
-  expect(itemList.at(0).text()).toEqual('');
-  expect(itemList.at(1).text()).toEqual('');
+  expect(itemList.length).toEqual(2);
+  expect(itemList.at(0).text()).toEqual('My first test item');
+  expect(itemList.at(1).text()).toEqual('My second test item');
 });

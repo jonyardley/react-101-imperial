@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import Header from '../components/header.js';
 
 it('render name', () => {
-  const props = { name : 'Jon' };
+  const props = { name: 'Jon' };
 
   const component = shallow(
     <Header {...props} />
