@@ -1,5 +1,6 @@
 // components/item-list.js
 import React from 'react';
+import Item from './item';
 
 const data = [
   'Item 1',
@@ -12,14 +13,13 @@ const data = [
   'Item 8'
 ];
 
-const renderListItem = (item) => (
-  <li key={`li-${item}`}>{item}</li>
-);
-
 export default () => (
-  <ul>
-    {
-      data.map(i => renderListItem(i))
-    }
-  </ul>
+  <div>
+    <p>My Items</p>
+    <ul>
+      {
+        data.map(i => <Item item={i} key={`li-${i}`} />)
+      }
+    </ul>
+  </div>
 );
