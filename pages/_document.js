@@ -10,7 +10,15 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" type="text/css" href="/static/styles.css" />
        </Head>
        <body className="main">
-         <Main />
+         <div className="container">
+           <div className="row">
+            <div className="one column"></div>
+            <div className="ten columns">
+              <Main />
+            </div>
+            <div className="one column"></div>
+          </div>
+         </div>
          <NextScript />
        </body>
      </html>
